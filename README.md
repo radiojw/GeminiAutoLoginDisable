@@ -16,18 +16,38 @@ This script does the same thing over network ADB without needing router rules or
 
 ## Step 2: Run the script
 
-Make sure you have `adb` installed on your computer. On macOS with Homebrew:
+### Windows
+
+1. Open Command Prompt or PowerShell and install `adb` using winget:
+
+```powershell
+winget install Google.PlatformTools
+```
+
+*(Close and reopen your Command Prompt / PowerShell window after installing so `adb` is in your PATH.)*
+
+2. Download or clone this repository, then either double-click `bypass_auto_signin.bat` (it will ask for your Gemini Air IP address) or run it from Command Prompt / PowerShell:
+
+```bat
+bypass_auto_signin.bat 192.168.1.50
+```
+
+### macOS / Linux
+
+1. Install `adb` if you don't already have it (on macOS with Homebrew):
 
 ```bash
 brew install android-platform-tools
 ```
 
-Then clone this repo and run the script with your device's IP address:
+2. Run the script with your device's IP address:
 
 ```bash
 chmod +x bypass_auto_signin.sh
 ./bypass_auto_signin.sh 192.168.1.50
 ```
+
+---
 
 When prompted on the TV screen, check **Always allow from this computer** and select **Allow**.
 
