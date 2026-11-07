@@ -32,12 +32,34 @@ winget install Google.PlatformTools
 bypass_auto_signin.bat 192.168.1.50
 ```
 
-### macOS / Linux
+### macOS
 
-1. Install `adb` if you don't already have it (on macOS with Homebrew):
+1. Install `adb` with Homebrew:
 
 ```bash
 brew install android-platform-tools
+```
+
+2. Run the script with your device's IP address:
+
+```bash
+chmod +x bypass_auto_signin.sh
+./bypass_auto_signin.sh 192.168.1.50
+```
+
+### Linux
+
+1. Install `adb` using your distro's package manager:
+
+```bash
+# Ubuntu / Debian
+sudo apt update && sudo apt install -y adb
+
+# Fedora / RHEL
+sudo dnf install -y android-tools
+
+# Arch Linux
+sudo pacman -S android-tools
 ```
 
 2. Run the script with your device's IP address:
