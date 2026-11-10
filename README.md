@@ -74,3 +74,8 @@ chmod +x bypass_auto_signin.sh
 When prompted on the TV screen, check **Always allow from this computer** and select **Allow**.
 
 After about 10 seconds, the old account will be signed out and the TV will stay on the **"First, we need your email"** login screen with normal internet access restored.
+
+## Notes
+
+- **Port number:** Just enter the IP address by itself (like `192.168.1.50`). Wireless debugging displays a random 5-digit pairing port on screen, but the Gemini Air accepts normal ADB connections on port `5555`. If you accidentally enter the random port, the script will fall back to `5555` automatically.
+- **Reboots vs. factory resets:** Once you sign in with your own DirecTV account, your login stays saved across normal reboots and power cycles. Because Auto Sign-In is tied to the device's serial number on DirecTV's servers (controlled at `directv.com/asi` by the original account owner), doing a full factory reset later will re-trigger Auto Sign-In and you will need to run this script again.
